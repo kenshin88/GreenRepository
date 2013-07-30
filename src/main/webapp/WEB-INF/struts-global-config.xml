@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+    <global-exceptions>
+        <exception key="errors.global.message"
+                   type="org.springframework.dao.DataAccessException"
+                   path="/jsp/common/exception.jsp"/>
+    </global-exceptions>
+
+    <action-mappings>
+        <action path="index" forward="/index.jsp"/>
+        <action path="home" forward="/jsp/home.jsp"/>
+    </action-mappings>
+    <!--<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>-->
+
+    <!--<message-resources parameter="MessageResources" null="false"/>-->
+
+    <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+        <set-property property="contextConfigLocation"
+                      value="/WEB-INF/spring-config.xml"/>
+    </plug-in>
+
+    <!--<plug-in className="org.apache.struts.validator.ValidatorPlugIn">-->
+        <!--<set-property value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"-->
+                      <!--property="pathnames"/>-->
+    <!--</plug-in>-->
+
+    <!--<plug-in className="org.apache.struts.tiles.TilesPlugin">-->
+        <!--<set-property value="/WEB-INF/tiles-defs.xml" property="definitions-config"/>-->
+    <!--</plug-in>-->
+
+</struts-config>

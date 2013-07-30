@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+    <form-beans>
+        <form-bean name="userForm" type="com.java.underground.form.UserActionForm"/>
+    </form-beans>
+
+    <action-mappings>
+        <action path="/createUser" type="org.springframework.web.struts.DelegatingActionProxy"
+                name="userForm" scope="request" validate="true" input="/inputUser.do">
+            <forward name="create" path="/jsp/user/list.jsp"/>
+        </action>
+
+        <action path="/updateUser" type="org.springframework.web.struts.DelegatingActionProxy"
+                name="userForm" scope="request" validate="true" input="/detailUser.do">
+            <forward name="update" path="/jsp/user/list.jsp"/>
+        </action>
+
+        <action path="/deleteUser" type="org.springframework.web.struts.DelegatingActionProxy"
+                name="userForm" scope="request" validate="false">
+            <forward name="delete" path="/jsp/user/list.jsp"/>
+        </action>
+
+        <action path="/detailUser" type="org.springframework.web.struts.DelegatingActionProxy"
+                name="userForm" scope="request" validate="false">
+            <forward name="detail" path="/jsp/user/update.jsp"/>
+        </action>
+
+        <action path="/detailChangePasswdUser" type="org.springframework.web.struts.DelegatingActionProxy"
+                name="userForm" scope="request" validate="false">
+            <forward name="passwdform" path="/jsp/user/changePasswd.jsp"/>
+        </action>
+
+        <action path="/changePasswdUser" type="org.springframework.web.struts.DelegatingActionProxy"
+                name="userForm" scope="request" validate="true" input="/detailChangePasswdUser.do">
+            <forward name="change" path="/jsp/user/list.jsp"/>
+        </action>
+
+        <action path="/inputUser" type="org.springframework.web.struts.DelegatingActionProxy"
+                name="userForm" scope="request" validate="false">
+            <forward name="inputform" path="/jsp/user/create.jsp"/>
+        </action>
+    </action-mappings>
+</struts-config>
