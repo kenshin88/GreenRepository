@@ -17,17 +17,17 @@
     </action-mappings>
     <!--<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>-->
 
-    <!--<message-resources parameter="MessageResources" null="false"/>-->
+    <message-resources parameter="MessageResources" null="false" key="globalMsg" />
 
     <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
         <set-property property="contextConfigLocation"
                       value="/WEB-INF/spring-config.xml"/>
     </plug-in>
 
-    <!--<plug-in className="org.apache.struts.validator.ValidatorPlugIn">-->
-        <!--<set-property value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"-->
-                      <!--property="pathnames"/>-->
-    <!--</plug-in>-->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"
+                      property="pathnames"/>
+    </plug-in>
 
     <!--<plug-in className="org.apache.struts.tiles.TilesPlugin">-->
         <!--<set-property value="/WEB-INF/tiles-defs.xml" property="definitions-config"/>-->

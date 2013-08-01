@@ -11,7 +11,7 @@ import org.apache.struts.validator.ValidatorActionForm;
  * Time: 10:27 AM
  * To change this template use File | Settings | File Templates.
  */
-public class UserActionForm extends ActionForm {
+public class UserActionForm extends ValidatorActionForm {
     private String oldPassword;
     private String confirmPassword;
     private UserEntity user;
