@@ -15,7 +15,8 @@
         <action path="index" forward="/index.jsp"/>
         <action path="home" forward="/jsp/home.jsp"/>
     </action-mappings>
-    <!--<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>-->
+
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
 
     <message-resources parameter="MessageResources" null="false" key="globalMsg" />
 
@@ -29,8 +30,8 @@
                       property="pathnames"/>
     </plug-in>
 
-    <!--<plug-in className="org.apache.struts.tiles.TilesPlugin">-->
-        <!--<set-property value="/WEB-INF/tiles-defs.xml" property="definitions-config"/>-->
-    <!--</plug-in>-->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property value="/WEB-INF/tiles-defs.xml" property="definitions-config"/>
+    </plug-in>
 
 </struts-config>

@@ -1,16 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: manhdung
-  Date: 7/28/13
-  Time: 7:29 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title></title>
-  </head>
-  <body>
+<%@ taglib uri="underground/tiles" prefix="tiles" %>
 
-  </body>
-</html>
+<tiles:insert definition="createUser.definition" />

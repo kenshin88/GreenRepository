@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!DOCTYPE tiles-definitions PUBLIC
-        "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
-        "http://struts.apache.org/dtds/tiles-config_1_1.dtd">
+        "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
 
 <tiles-definitions>
-    <definition name="example"/>
+    <definition name="base.definition" path="/template/layout.jsp">
+        <put name="title" value="/template/base/title.jsp"  type="page" />
+        <put name="css" value="/template/base/css.jsp"  type="page" />
+        <put name="header" value="/template/base/header.jsp"  type="page" />
+        <put name="body" value="/template/base/body.jsp"  type="page" />
+        <put name="footer" value="/template/base/footer.jsp" type="page" />
+        <put name="js" value="/template/base/js.jsp" type="page" />
+    </definition>
+
+    <definition name="createUser.definition" extends="base.definition">
+        <put name="title" value="Create User"  type="string" />
+        <put name="body" value="/template/user/createUser-definition.jsp"  type="page" />
+    </definition>
 </tiles-definitions>

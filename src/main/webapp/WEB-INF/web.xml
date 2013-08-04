@@ -8,12 +8,14 @@
     <servlet>
         <servlet-name>action</servlet-name>
         <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+
         <init-param>
             <param-name>config</param-name>
             <param-value>/WEB-INF/struts-global-config.xml,
                 /WEB-INF/struts-user-config.xml
             </param-value>
         </init-param>
+
         <load-on-startup>2</load-on-startup>
     </servlet>
 
@@ -21,6 +23,29 @@
         <servlet-name>action</servlet-name>
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>underground/tiles</taglib-uri>
+            <taglib-location>/WEB-INF/tld/struts-tiles.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>underground/bean</taglib-uri>
+            <taglib-location>/WEB-INF/tld/struts-bean.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>underground/html</taglib-uri>
+            <taglib-location>/WEB-INF/tld/struts-html.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>underground/logic</taglib-uri>
+            <taglib-location>/WEB-INF/tld/struts-logic.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>underground/nested</taglib-uri>
+            <taglib-location>/WEB-INF/tld/struts-nested.tld</taglib-location>
+        </taglib>
+    </jsp-config>
 
     <welcome-file-list>
         <welcome-file>/index.jsp</welcome-file>
