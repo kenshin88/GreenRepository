@@ -14,6 +14,9 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class PointcutArchitecture {
 
-    @Pointcut("execution(* com.java.underground.action.*.*(..))")
+    @Pointcut("execution(* com.java.underground.action.CreateUserAction.*(..))")
     public void  inActionLayer() {}
+
+    @Pointcut("execution(* com.java.underground.action.Form*.*(..))")
+    public void  inFormAction() {}
 }

@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * To change this template use File | Settings | File Templates.
  */
 @Controller
-public class DetailUserAction extends AbstractAction {
+public class FormUpdateUserAction extends AbstractAction {
     public ActionForward execute(ActionMapping mapping,
                                  ActionForm form,
                                  HttpServletRequest request,

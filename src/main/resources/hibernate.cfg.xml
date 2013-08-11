@@ -9,6 +9,7 @@
         <property name="format_sql">true</property>
         <!--<property name="hibernate.hbm2ddl.auto">create</property>-->
         <mapping resource="com/java/underground/entity/UserEntity.hbm.xml"/>
+        <mapping resource="com/java/underground/query/UserEntity.query.xml"/>
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
 

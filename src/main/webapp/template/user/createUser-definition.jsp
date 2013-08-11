@@ -1,5 +1,10 @@
+<%@ taglib uri="underground/html" prefix="html" %>
+<%@ taglib uri="underground/logic" prefix="logic" %>
+<%@ taglib uri="underground/nested" prefix="nested" %>
+<%@ taglib uri="underground/bean" prefix="bean" %>
 <div class="container">
-    <form>
+    <form action="/<bean:message bundle="globalMsg" key="web.application.context"/>/createUser.do" method="post">
+        <input type="hidden" name="token" id="token" value="<bean:write name='userForm' property="token"/>" />
         <fieldset>
             <legend>Create new account</legend>
             <div class="form-group">

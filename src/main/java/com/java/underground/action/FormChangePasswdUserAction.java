@@ -1,7 +1,5 @@
 package com.java.underground.action;
 
-import com.java.underground.entity.UserEntity;
-import com.java.underground.form.UserActionForm;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
@@ -14,21 +12,15 @@ import javax.servlet.http.HttpServletResponse;
  * Created with IntelliJ IDEA.
  * User: manhdung
  * Date: 7/28/13
- * Time: 10:29 AM
+ * Time: 10:31 AM
  * To change this template use File | Settings | File Templates.
  */
 @Controller
-public class CreateUserAction extends AbstractAction {
+public class FormChangePasswdUserAction extends AbstractAction {
     public ActionForward execute(ActionMapping mapping,
                                  ActionForm form,
                                  HttpServletRequest request,
                                  HttpServletResponse response) {
-        UserActionForm userActionForm = (UserActionForm)form;
-        if(userActionForm.getCommand() != null){
-            return mapping.findForward(userActionForm.getCommand());
-        }
-        UserEntity userEntity = userActionForm.getUser();
-        userService.doInsert(userEntity);
-        return mapping.findForward("create");
+        throw new UnsupportedOperationException();
     }
 }

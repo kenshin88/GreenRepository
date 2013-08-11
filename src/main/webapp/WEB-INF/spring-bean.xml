@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://www.springframework.org/schema/aop
-       http://www.springframework.org/schema/aop/spring-aop.xsd">
-
-    <aop:aspectj-autoproxy/>
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean name="/createUser" class="com.java.underground.action.CreateUserAction"/>
     <bean name="/updateUser" class="com.java.underground.action.UpdateUserAction"/>
     <bean name="/deleteUser" class="com.java.underground.action.DeleteUserAction"/>
     <bean name="/changePasswdUser" class="com.java.underground.action.ChangePasswdUserAction"/>
-    <bean name="/detailUser" class="com.java.underground.action.DetailUserAction"/>
-    <bean name="/inputUser" class="com.java.underground.action.InputUserAction"/>
-    <bean name="/detailChangePasswdUser" class="com.java.underground.action.DetailChangePasswdUserAction"/>
-
+    <bean name="/detailUser" class="com.java.underground.action.FormUpdateUserAction"/>
+    <bean name="/inputUser" class="com.java.underground.action.FormCreateUserAction"/>
+    <bean name="/detailChangePasswdUser" class="com.java.underground.action.FormChangePasswdUserAction"/>
+    <bean name="/testUser" class="com.java.underground.action.TestUserAction"/>
 
     <bean id="commonAspect" class="com.java.underground.aspect.CommonAspect" />
     <bean id="pointcutArchitecture" class="com.java.underground.aspect.PointcutArchitecture" />
+
+    <bean id="userDao" class="com.java.underground.dao.UserDaoImpl" />
 </beans>

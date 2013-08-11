@@ -12,9 +12,9 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface UserService {
-    void doInsert(UserEntity userEntity);
+    Integer doInsert(UserEntity userEntity);
     void doUpdate(UserEntity userEntity);
     void doDelete(UserEntity userEntity);
-    List doList();
+    List findByUsername(String username);
 }
 

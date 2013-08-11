@@ -1,6 +1,9 @@
 package com.java.underground.bean;
 
+import com.java.underground.dao.GenericDao;
+import com.java.underground.dao.GenericDaoImpl;
 import com.java.underground.dao.UserDao;
+import com.java.underground.dao.UserDaoImpl;
 import com.java.underground.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,21 +20,18 @@ import java.util.List;
  */
 @Service
 public class UserServiceImpl implements UserService {
-    private UserDao userDao;
-
-    public UserDao getUserDao() {
-        return userDao;
-    }
+    private UserDaoImpl userDao;
 
     @Autowired
-    public void setUserDao(UserDao userDao) {
+    public void setUserDao(UserDaoImpl userDao) {
         this.userDao = userDao;
     }
 
     @Override
     @Transactional
-    public void doInsert(UserEntity userEntity) {
-        userDao.save(userEntity);
+    public Integer doInsert(UserEntity userEntity) {
+        Integer i =  (Integer)userDao.create(userEntity);
+        return i;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public List doList() {
-        return userDao.list();
+    public List findByUsername(String username) {
+        return userDao.findByUsername(username);
     }
 }

@@ -16,11 +16,11 @@ import javax.servlet.http.HttpServletResponse;
  * To change this template use File | Settings | File Templates.
  */
 @Controller
-public class InputUserAction extends AbstractAction {
+public class FormCreateUserAction extends AbstractAction {
     public ActionForward execute(ActionMapping mapping,
                                  ActionForm form,
                                  HttpServletRequest request,
                                  HttpServletResponse response) {
-        throw new UnsupportedOperationException();
+        return mapping.findForward("inputform");
     }
 }
