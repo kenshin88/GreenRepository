@@ -9,7 +9,7 @@
 
     <aop:aspectj-autoproxy proxy-target-class="false"/>
 
-    <bean id="commonAspect" class="com.java.underground.aspect.CommonAspect"/>
-    <bean id="pointcutArchitecture" class="com.java.underground.aspect.PointcutArchitecture"/>
+    <bean id="commonAspect" class="com.underground.aspect.CommonAspect"/>
+    <bean id="pointcutArchitecture" class="com.underground.aspect.PointcutArchitecture"/>
 
 </beans>

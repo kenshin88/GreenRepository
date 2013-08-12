@@ -14,8 +14,8 @@
 
     <tx:annotation-driven transaction-manager="txManager"/>
 
-    <context:component-scan base-package="com.java.underground.dao" />
-    <context:component-scan base-package="com.java.underground.bean" />
+    <context:component-scan base-package="com.underground.dao" />
+    <context:component-scan base-package="com.underground.bean" />
 
     <bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />

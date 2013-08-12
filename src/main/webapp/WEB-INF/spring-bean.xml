@@ -4,17 +4,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean name="/createUser" class="com.java.underground.action.CreateUserAction"/>
-    <bean name="/updateUser" class="com.java.underground.action.UpdateUserAction"/>
-    <bean name="/deleteUser" class="com.java.underground.action.DeleteUserAction"/>
-    <bean name="/changePasswdUser" class="com.java.underground.action.ChangePasswdUserAction"/>
-    <bean name="/detailUser" class="com.java.underground.action.FormUpdateUserAction"/>
-    <bean name="/inputUser" class="com.java.underground.action.FormCreateUserAction"/>
-    <bean name="/detailChangePasswdUser" class="com.java.underground.action.FormChangePasswdUserAction"/>
-    <bean name="/testUser" class="com.java.underground.action.TestUserAction"/>
+    <bean name="/createUser" class="com.underground.action.CreateUserAction"/>
+    <bean name="/updateUser" class="com.underground.action.UpdateUserAction"/>
+    <bean name="/deleteUser" class="com.underground.action.DeleteUserAction"/>
+    <bean name="/changePasswdUser" class="com.underground.action.ChangePasswdUserAction"/>
+    <bean name="/detailUser" class="com.underground.action.FormUpdateUserAction"/>
+    <bean name="/inputUser" class="com.underground.action.FormCreateUserAction"/>
+    <bean name="/detailChangePasswdUser" class="com.underground.action.FormChangePasswdUserAction"/>
+    <bean name="/testUser" class="com.underground.action.TestUserAction"/>
 
-    <bean id="commonAspect" class="com.java.underground.aspect.CommonAspect" />
-    <bean id="pointcutArchitecture" class="com.java.underground.aspect.PointcutArchitecture" />
+    <bean id="commonAspect" class="com.underground.aspect.CommonAspect" />
+    <bean id="pointcutArchitecture" class="com.underground.aspect.PointcutArchitecture" />
 
-    <bean id="userDao" class="com.java.underground.dao.UserDaoImpl" />
+    <bean id="userDao" class="com.underground.dao.UserDaoImpl" />
 </beans>

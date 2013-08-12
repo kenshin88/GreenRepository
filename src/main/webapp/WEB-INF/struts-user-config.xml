@@ -6,7 +6,7 @@
 
 <struts-config>
     <form-beans>
-        <form-bean name="userForm" type="com.java.underground.form.UserActionForm"/>
+        <form-bean name="userForm" type="com.underground.form.UserActionForm"/>
     </form-beans>
 
     <action-mappings>
