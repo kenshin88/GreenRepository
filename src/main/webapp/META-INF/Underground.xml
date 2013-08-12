@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    If you want your web context path is /Underground, follow these instructions:
+    Copy this file into ${catalina.home}/conf/[enginename]/[hostname]
+    usually, enginename is Catalina and hostname is localhost
+    Don't rename this file
+    Put your war explode into ${catalina.base}/green
+    If you want add version for your web app, you will append ##[version-number] after the name of the file
+    For example: Underground##1.0.xml
+    Restart your tomcat to see the change
+ -->
+<Context path="/Underground" reloadable="false"
+         docBase="${catalina.base}/green/Spring_Struts_Hibernate_Integration_war_exploded">
+</Context>

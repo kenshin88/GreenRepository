@@ -5,6 +5,11 @@
 		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          version="2.5">
 
+    <description>
+        Spring Struts Hibernate Integration and more...
+    </description>
+    <display-name>Green Framework</display-name>
+
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
