@@ -1,9 +1,15 @@
 package com.underground.bean;
 
+import com.underground.AbstractUserTests;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import static junit.framework.Assert.assertNotNull;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,13 +19,13 @@ import org.springframework.test.context.junit4.AbstractTransactionalJUnit4Spring
  * To change this template use File | Settings | File Templates.
  */
 @ContextConfiguration
-public class TestCreateUserService extends AbstractTransactionalJUnit4SpringContextTests {
+@DirtiesContext
+public class TestUserService extends AbstractUserTests {
     @Autowired
-    protected UserService userService;
-
+    private UserService userService;
 
     @Test
-    public void getVets() {
-        userService.doInsert(null);
+    public void testNotNullService() {
+        assertNotNull(userService);
     }
 }
